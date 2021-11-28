@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KosoSvg</class>
+ <widget class="QMainWindow" name="KosoSvg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>822</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>KosoSvg</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>822</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="open_action"/>
+    <addaction name="save_action"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>画布</string>
+    </property>
+    <addaction name="new_action"/>
+    <addaction name="clear_action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="selector_action"/>
+   <addaction name="pen_action"/>
+   <addaction name="line_action"/>
+   <addaction name="reac_action"/>
+   <addaction name="circle_action"/>
+   <addaction name="hexagon_action"/>
+   <addaction name="triangle_action"/>
+   <addaction name="text_action"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="styletoolBar">
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>90</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="pencolor_action"/>
+   <addaction name="backColor_action"/>
+   <addaction name="fill_action"/>
+  </widget>
+  <action name="pen_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/pen.png</normalon>
+     <activeon>:/image/pen_a.png</activeon>
+     <selectedon>:/image/pen_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>画笔</string>
+   </property>
+  </action>
+  <action name="line_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/line.png</normalon>
+     <activeon>:/image/line_a.png</activeon>
+     <selectedon>:/image/line_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="reac_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/rectangle.png</normaloff>
+     <normalon>:/image/rectangle.png</normalon>
+     <activeoff>:/image/rectangle.png</activeoff>
+     <activeon>:/image/rectangle_a.png</activeon>
+     <selectedoff>:/image/rectangle.png</selectedoff>
+     <selectedon>:/image/rectangle_s.png</selectedon>:/image/rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="circle_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/circle.png</normalon>
+     <activeon>:/image/circle_a.png</activeon>
+     <selectedon>:/image/circle_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="open_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/open.png</normaloff>:/image/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开SVG文件</string>
+   </property>
+  </action>
+  <action name="save_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/save.png</normaloff>:/image/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存SVG文件</string>
+   </property>
+  </action>
+  <action name="text_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/text.png</normaloff>
+     <normalon>:/image/text.png</normalon>
+     <activeoff>:/image/text_a.png</activeoff>
+     <activeon>:/image/text_a.png</activeon>
+     <selectedoff>:/image/text_s.png</selectedoff>
+     <selectedon>:/image/text_s.png</selectedon>:/image/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>文本</string>
+   </property>
+  </action>
+  <action name="pencolor_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/pencolor.png</normaloff>
+     <normalon>:/image/pencolor.png</normalon>
+     <activeoff>:/image/pencolor.png</activeoff>
+     <activeon>:/image/pencolor_a.png</activeon>
+     <selectedoff>:/image/pencolor.png</selectedoff>
+     <selectedon>:/image/pencolor_s.png</selectedon>:/image/pencolor.png</iconset>
+   </property>
+   <property name="text">
+    <string>画笔颜色</string>
+   </property>
+  </action>
+  <action name="backColor_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/backcolor.png</normaloff>
+     <normalon>:/image/pencolor.png</normalon>
+     <activeoff>:/image/backcolor_a.png</activeoff>
+     <activeon>:/image/backcolor_a.png</activeon>
+     <selectedoff>:/image/backcolor_s.png</selectedoff>
+     <selectedon>:/image/backcolor_s.png</selectedon>:/image/backcolor.png</iconset>
+   </property>
+   <property name="text">
+    <string>画布色</string>
+   </property>
+  </action>
+  <action name="height_action">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/height.png</normaloff>
+     <normalon>:/image/height.png</normalon>
+     <activeon>:/image/height_a.png</activeon>
+     <selectedon>:/image/height_s.png</selectedon>:/image/height.png</iconset>
+   </property>
+   <property name="text">
+    <string>画布尺寸</string>
+   </property>
+   <property name="toolTip">
+    <string>画布高度</string>
+   </property>
+  </action>
+  <action name="weight_action">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/width.png</normaloff>
+     <normalon>:/image/width.png</normalon>
+     <activeon>:/image/width_a.png</activeon>
+     <selectedon>:/image/width_s.png</selectedon>:/image/width.png</iconset>
+   </property>
+   <property name="text">
+    <string>weight</string>
+   </property>
+   <property name="toolTip">
+    <string>画布宽度</string>
+   </property>
+  </action>
+  <action name="selector_action">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/image/select.png</normaloff>
+     <normalon>:/image/select.png</normalon>
+     <activeoff>:/image/select_a.png</activeoff>
+     <activeon>:/image/select_a.png</activeon>
+     <selectedoff>:/image/select_s.png</selectedoff>
+     <selectedon>:/image/select_s.png</selectedon>:/image/select.png</iconset>
+   </property>
+   <property name="text">
+    <string>selector</string>
+   </property>
+   <property name="toolTip">
+    <string>选择器</string>
+   </property>
+  </action>
+  <action name="hexagon_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/hexagon.png</normalon>
+     <activeon>:/image/hexagon_a.png</activeon>
+     <selectedon>:/image/hexagon_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>hexagon</string>
+   </property>
+   <property name="toolTip">
+    <string>六边形</string>
+   </property>
+  </action>
+  <action name="triangle_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/triangle.png</normalon>
+     <activeon>:/image/triangle_a.png</activeon>
+     <selectedon>:/image/triangle_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>triangle</string>
+   </property>
+   <property name="toolTip">
+    <string>三角形</string>
+   </property>
+  </action>
+  <action name="fill_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/fill.png</normalon>
+     <activeon>:/image/fill_a.png</activeon>
+     <selectedon>:/image/fill_s.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>fill</string>
+   </property>
+   <property name="toolTip">
+    <string>填充</string>
+   </property>
+  </action>
+  <action name="clear_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/clear.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>清除</string>
+   </property>
+  </action>
+  <action name="new_action">
+   <property name="icon">
+    <iconset>
+     <normalon>:/image/newcancvs_s.png</normalon>
+     <activeon>:/image/newcancvs_a.png</activeon>
+     <selectedon>:/image/newcancvs.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rec.qrc"/>
+ </resources>
+ <connections/>
+</ui>
